@@ -3,19 +3,18 @@ export const FETCH_COMMENTS_SUCCESS = "FETCH_COMMENTS_SUCCESS";
 export const FETCH_COMMENTS_FAILURE = "FETCH_COMMENTS_FAILURE";
 
 export const fetchCommentsRequest = (data) => ({
-  // data => page
   type: FETCH_COMMENTS_REQUEST,
-  data,
+  data, // 현재 페이지
 });
 
 export const fetchCommentsSuccess = (payload) => ({
   type: FETCH_COMMENTS_SUCCESS,
-  payload, // 실질적으로 10개 데이터
+  payload, // 10개의 데이터
 });
 
-export const fetchCommentsFailure = (data) => ({
+export const fetchCommentsFailure = (payload) => ({
   type: FETCH_COMMENTS_FAILURE,
-  data, // error
+  payload, // error 목록
 });
 
 const initialStete = {
@@ -36,20 +35,19 @@ const comment = (state = initialStete, action) => {
         fetchLoading: true,
       };
     case FETCH_COMMENTS_SUCCESS:
-      console.log(action.payload.length);
       return {
         ...state,
+        hasMoreComments: action.payload.length !== 0,
         comments: state.comments.concat(action.payload),
         fetchDone: true,
         fetchError: null,
         fetchLoading: false,
-        hasMoreComments: action.payload.length !== 0,
       };
     case FETCH_COMMENTS_FAILURE:
       return {
         ...state,
         fetchDone: true,
-        fetchError: action.data,
+        fetchError: action.payload,
         fetchLoading: false,
       };
     default:

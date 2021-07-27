@@ -6,7 +6,6 @@ import {
   FETCH_COMMENTS_FAILURE,
 } from "../reducers/comment";
 
-// saga 생성
 function* fetchCommentsSaga(action) {
   try {
     const response = yield call(fetchApi.fetchCommentAPI, action.data);

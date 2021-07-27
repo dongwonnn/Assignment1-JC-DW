@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardWrapper = styled.div`
+export const CommentWrapper = styled.div`
   padding: 20px;
   border-radius: 20px;
   background: #f8f9fa;
@@ -27,9 +27,9 @@ export const CardWrapper = styled.div`
   }
 `;
 
-const Card = ({ comment }) => {
+const Comment = ({ comment }) => {
   return (
-    <CardWrapper>
+    <CommentWrapper>
       <dl>
         <dt>Comment Id</dt>
         <dd>{comment.id}</dd>
@@ -42,8 +42,8 @@ const Card = ({ comment }) => {
         <dt>Comment</dt>
         <dd>{comment.body}</dd>
       </dl>
-    </CardWrapper>
+    </CommentWrapper>
   );
 };
 
-export default Card;
+export default Comment;
