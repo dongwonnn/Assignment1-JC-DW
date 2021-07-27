@@ -20,7 +20,7 @@ export const fetchCommentsFailure = (data) => ({
 
 const initialStete = {
   comments: [],
-  fetchSuccess: null,
+  fetchDone: true,
   fetchError: null,
   fetchLoading: false,
 };
@@ -30,15 +30,24 @@ const comment = (state = initialStete, action) => {
     case FETCH_COMMENTS_REQUEST:
       return {
         ...state,
+        fetchDone: false,
+        fetchError: null,
+        fetchLoading: true,
       };
     case FETCH_COMMENTS_SUCCESS:
       return {
         ...state,
+        fetchDone: true,
+        fetchError: null,
+        fetchLoading: false,
         comments: state.comments.concat(action.payload),
       };
     case FETCH_COMMENTS_FAILURE:
       return {
         ...state,
+        fetchDone: true,
+        fetchError: action.data,
+        fetchLoading: false,
       };
     default:
       return state;
