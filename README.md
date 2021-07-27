@@ -10,8 +10,12 @@
 - [x] CardList
 - [x] Card
 
-3. Infinity Scrol
+3. 전역상태 관리
 
-- [ ] DummyData로 띄우기
+- [x] Dummy Data 대신 전역 변수 사용
+- [x] Redux-saga를 이용한 비동기 네트워크 통신
+
+4. Infinity Scroll
+
 - [ ] API 받아오기
 - [ ] 무한스크롤 구현
