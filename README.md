@@ -40,32 +40,32 @@
 
 ### 폴더구조
 
-📦src
-┣ 📂components -- 컴포넌트 단위의 React 파일
-┃ ┣ 📜Comment.js
-┃ ┗ 📜CommentList.js
-┃
-┣ 📂lib -- 모듈화된 함수
-┃ ┣ 📂api
-┃ ┃ ┣ 📜client.js
-┃ ┃ ┗ 📜data.js
-┃ ┣ 📂hooks
-┃ ┗ 📂styles
-┃ &nbsp; &nbsp; &nbsp;┗ 📜GlobalStyles.js
-┃
-┣ 📂pages -- 페이지 단위의 React 파일
-┃ ┗ 📜CommentPage.js
-┃
-┣ 📂reducers -- 상태를 변화시키는 로직
-┃ ┣ 📜comment.js
-┃ ┗ 📜index.js
-┃
+📦src  
+┣ 📂components -- 컴포넌트 단위의 React 파일  
+┃ ┣ 📜Comment.js  
+┃ ┗ 📜CommentList.js  
+┃  
+┣ 📂lib -- 모듈화된 함수  
+┃ ┣ 📂api  
+┃ ┃ ┣ 📜client.js  
+┃ ┃ ┗ 📜data.js  
+┃ ┣ 📂hooks  
+┃ ┗ 📂styles  
+┃ &nbsp; &nbsp; &nbsp;┗ 📜GlobalStyles.js  
+┃  
+┣ 📂pages -- 페이지 단위의 React 파일  
+┃ ┗ 📜CommentPage.js  
+┃  
+┣ 📂reducers -- 상태를 변화시키는 로직  
+┃ ┣ 📜comment.js  
+┃ ┗ 📜index.js  
+┃  
 ┣ 📂sagas -- 네트워크 비동기 처리  
- ┃ ┣ 📜comment.js
-┃ ┗ 📜index.js
-┃
-┣ 📂store -- 전역 state 선언
-┃ ┗ 📜index.js
-┃
-┣ 📜App.js
-┗ 📜index.js
+┃ ┣ 📜comment.js  
+┃ ┗ 📜index.js  
+┃  
+┣ 📂store -- 전역 state 선언  
+┃ ┗ 📜index.js  
+┃  
+┣ 📜App.js  
+┗ 📜index.js  
