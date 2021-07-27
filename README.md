@@ -7,8 +7,8 @@
 
 2. styling
 
-- [ ] CardList
-- [ ] Card
+- [x] CardList
+- [x] Card
 
 3. Infinity Scrol
 
