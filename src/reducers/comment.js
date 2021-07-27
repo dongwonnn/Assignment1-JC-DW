@@ -50,7 +50,7 @@ const comment = (state = initialStete, action) => {
         ...state,
         fetchDone: true,
         fetchError: action.data,
-        fetchLoading: true,
+        fetchLoading: false,
       };
     default:
       return state;
