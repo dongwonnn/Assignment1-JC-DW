@@ -10,7 +10,6 @@ import {
 function* fetchCommentsSaga(action) {
   try {
     const response = yield call(fetchApi.fetchCommentAPI, action.data);
-    console.log(response);
 
     yield put({
       type: FETCH_COMMENTS_SUCCESS,
