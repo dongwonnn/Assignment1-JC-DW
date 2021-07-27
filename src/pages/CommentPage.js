@@ -1,12 +1,11 @@
 import CardList from "../components/CardList";
 
-const Home = () => {
+const CommentPage = () => {
   return (
     <div>
-      <h2>홈</h2>
       <CardList />
     </div>
   );
 };
 
-export default Home;
+export default CommentPage;
