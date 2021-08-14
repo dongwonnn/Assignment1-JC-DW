@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { CenterText } from "utils/styles/CenterText";
 import { LoadingText } from "utils/styles/LoadingText";
 
-import CommentList from "components/CommentList";
+import CommentLists from "components/CommentLists";
 
 import { fetchCommentsRequest } from "reducers/comment";
 
@@ -51,7 +51,7 @@ const CommentPage = () => {
 
   return (
     <>
-      <CommentList />
+      <CommentLists />
       <div ref={hasMoreComments && !fetchLoading ? ref : undefined} />
       {fetchLoading && <LoadingText>⏰Loading...⏰</LoadingText>}
     </>

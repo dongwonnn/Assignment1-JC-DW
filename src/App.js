@@ -1,11 +1,11 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import CommentPage from "pages/CommentPage";
+import Comment from "pages/Comment";
 
 const App = () => {
   return (
     <Switch>
-      <Route path="/" component={CommentPage} />
+      <Route path="/" component={Comment} />
     </Switch>
   );
 };
