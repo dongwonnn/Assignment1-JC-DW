@@ -2,11 +2,6 @@ import { useSelector } from "react-redux";
 import Comment from "components/Comment";
 import styled from "styled-components";
 
-const CommentListWrapper = styled.ul`
-  width: 500px;
-  margin: 33px auto;
-`;
-
 const CommentList = () => {
   const { comments } = useSelector((state) => state.comment);
 
@@ -22,3 +17,8 @@ const CommentList = () => {
 };
 
 export default CommentList;
+
+const CommentListWrapper = styled.ul`
+  width: 500px;
+  margin: 33px auto;
+`;

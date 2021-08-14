@@ -1,5 +1,26 @@
 import styled from "styled-components";
 
+const Comment = ({ comment }) => {
+  return (
+    <CommentWrapper>
+      <dl>
+        <dt>Comment Id</dt>
+        <dd>{comment.id}</dd>
+      </dl>
+      <dl>
+        <dt>Email</dt>
+        <dd>{comment.email}</dd>
+      </dl>
+      <dl>
+        <dt>Comment</dt>
+        <dd>{comment.body}</dd>
+      </dl>
+    </CommentWrapper>
+  );
+};
+
+export default Comment;
+
 export const CommentWrapper = styled.div`
   padding: 20px;
   border-radius: 20px;
@@ -26,24 +47,3 @@ export const CommentWrapper = styled.div`
     }
   }
 `;
-
-const Comment = ({ comment }) => {
-  return (
-    <CommentWrapper>
-      <dl>
-        <dt>Comment Id</dt>
-        <dd>{comment.id}</dd>
-      </dl>
-      <dl>
-        <dt>Email</dt>
-        <dd>{comment.email}</dd>
-      </dl>
-      <dl>
-        <dt>Comment</dt>
-        <dd>{comment.body}</dd>
-      </dl>
-    </CommentWrapper>
-  );
-};
-
-export default Comment;
