@@ -1,10 +1,10 @@
 import React from "react";
-import App from "App";
 import ReactDOM from "react-dom";
-import store from "store";
 import { BrowserRouter } from "react-router-dom";
-import GlobalStyles from "utils/styles/GlobalStyles";
 import { Provider } from "react-redux";
+import GlobalStyles from "utils/styles/GlobalStyles";
+import App from "App";
+import store from "store";
 
 ReactDOM.render(
   <BrowserRouter>
