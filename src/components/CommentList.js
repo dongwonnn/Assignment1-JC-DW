@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import Comment from "./Comment";
+import Comment from "components/Comment";
 import styled from "styled-components";
 
 const CommentListWrapper = styled.ul`

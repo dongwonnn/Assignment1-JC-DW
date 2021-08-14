@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL, END_POINT, LIMIT } from "uitls/constants";
+import { BASE_URL, END_POINT, LIMIT } from "utils/constants";
 
 axios.defaults.baseURL = BASE_URL;
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import CommentPage from "./pages/CommentPage";
+import CommentPage from "pages/CommentPage";
 
 const App = () => {
   return (

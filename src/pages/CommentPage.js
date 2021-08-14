@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useInView } from "react-intersection-observer";
 
-import CommentList from "../components/CommentList";
+import CommentList from "components/CommentList";
 
-import { fetchCommentsRequest } from "../reducers/comment";
-import { CenterText } from "../lib/styles/CenterText";
-import { LoadingText } from "../lib/styles/LoadingText";
+import { fetchCommentsRequest } from "reducers/comment";
+import { CenterText } from "utils/styles/CenterText";
+import { LoadingText } from "utils/styles/LoadingText";
 
 const CommentPage = () => {
   const [page, setPage] = useState(1);
