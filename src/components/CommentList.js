@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const CommentList = ({ comment }) => {
   return (
@@ -17,6 +18,16 @@ const CommentList = ({ comment }) => {
       </dl>
     </CommentListWrapper>
   );
+};
+
+CommentList.propTypes = {
+  comment: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      emial: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default CommentList;
