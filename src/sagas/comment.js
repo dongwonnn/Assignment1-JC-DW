@@ -1,10 +1,10 @@
 import { call, put, takeLatest } from "redux-saga/effects";
-import * as fetchApi from "../lib/api/data";
+import * as fetchApi from "utils/api/data";
 import {
   FETCH_COMMENTS_REQUEST,
   FETCH_COMMENTS_SUCCESS,
   FETCH_COMMENTS_FAILURE,
-} from "../reducers/comment";
+} from "reducers/comment";
 
 function* fetchCommentsSaga(action) {
   try {

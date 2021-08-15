@@ -1,24 +1,49 @@
-import { useSelector } from "react-redux";
-import Comment from "./Comment";
 import styled from "styled-components";
 
-const CommentListWrapper = styled.ul`
-  width: 500px;
-  margin: 33px auto;
-`;
-
-const CommentList = () => {
-  const { comments } = useSelector((state) => state.comment);
-
+const CommentList = ({ comment }) => {
   return (
     <CommentListWrapper>
-      {comments.map((comment) => (
-        <li key={comment.id}>
-          <Comment comment={comment} />
-        </li>
-      ))}
+      <dl>
+        <dt>Comment Id</dt>
+        <dd>{comment.id}</dd>
+      </dl>
+      <dl>
+        <dt>Email</dt>
+        <dd>{comment.email}</dd>
+      </dl>
+      <dl>
+        <dt>Comment</dt>
+        <dd>{comment.body}</dd>
+      </dl>
     </CommentListWrapper>
   );
 };
 
 export default CommentList;
+
+export const CommentListWrapper = styled.div`
+  padding: 20px;
+  border-radius: 20px;
+  background: #f8f9fa;
+  border: 0.5px solid #ced4da;
+  border-radius: 20px;
+  margin-bottom: 12px;
+
+  & dl {
+    font-size: 18px;
+    display: flex;
+
+    & dt {
+      padding-right: 12px;
+      padding-bottom: 12px;
+      font-weight: bold;
+    }
+  }
+
+  & dl:nth-last-child(1) {
+    display: block;
+    & dt {
+      padding-bottom: 2px;
+    }
+  }
+`;
