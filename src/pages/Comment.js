@@ -9,11 +9,11 @@ import {
 } from "utils/constants";
 import { CenterText } from "utils/styles/CenterText";
 import { LoadingText } from "utils/styles/LoadingText";
+import { throttle } from "utils/throttle";
 
 import CommentLists from "components/CommentLists";
 
 import { fetchCommentsRequest } from "reducers/comment";
-import { throttle } from "utils/throttle";
 
 const CommentPage = () => {
   const [page, setPage] = useState(DEFAULT_PAGE);

@@ -1,13 +1,8 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
-import Comment from "pages/Comment";
+import Routes from "route/Routes";
 
 const App = () => {
-  return (
-    <Switch>
-      <Route path="/" component={Comment} />
-    </Switch>
-  );
+  return <Routes />;
 };
 
 export default App;
